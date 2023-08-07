@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../assets/planet.png';
 import { NavLink } from 'react-router-dom';
+import logo from '../assets/planet.png';
 
 function Header() {
   return (
@@ -12,7 +12,7 @@ function Header() {
           width="60px"
           height="60px"
         />
-        <h1 className="site-title">Space Traveler's Hub</h1>
+        <h1 className="site-title">Space Traveler&apos;s Hub</h1>
       </div>
       <nav className="main-header-nav">
         <NavLink className="nav-link" to="/">
