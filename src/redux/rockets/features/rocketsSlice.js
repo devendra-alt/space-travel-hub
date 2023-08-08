@@ -9,3 +9,29 @@ export const fetchRocketData = createAsyncThunk(
     }
   }
 );
+const rocketSlice = createSlice({
+  name: 'rockets',
+  initialState,
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchRocketData.pending, (state) => {
+        state.loading = 'pending';
+      })
+      .addCase(fetchRocketData.fulfilled, (state, { payload }) => {
+        let data = payload;
+        state.rockets = data.map((rocket) => {
+          const rocketData = {};
+          rocketData['id'] = rocket.id;
+          rocketData['name'] = rocket.rocket_name;
+          rocketData['type'] = rocket.rocket_type;
+          rocketData['images'] = rocket.flickr_images;
+          return rocketData;
+        });
+        state.loading = 'loaded';
+      })
+      .addCase(fetchRocketData.rejected, (state, { payload }) => {
+        state.loading = 'failed';
+        state.error = payload;
+      });
+  },
+});
