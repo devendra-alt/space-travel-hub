@@ -1,0 +1,32 @@
+:root {
+  --primary-bg: #fff;
+}
+
+.main-header {
+  padding: 1rem 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title-section {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.site-title {
+  font-size: 3rem;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  padding-right: 2rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+a.active.nav-link {
+  text-decoration: underline;
+}
