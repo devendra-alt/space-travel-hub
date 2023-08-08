@@ -3,7 +3,7 @@
 }
 
 .main-header {
-  padding: 1rem 10rem;
+  padding: 2rem 4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -17,7 +17,12 @@
 }
 
 .site-title {
-  font-size: 3rem;
+  font-size: 1.8rem;
+}
+
+.main-header-nav {
+  display: flex;
+  flex-direction: column;
 }
 
 .nav-link:link,
@@ -29,4 +34,19 @@
 
 a.active.nav-link {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 764px) {
+  .main-header {
+    padding: 1rem 10rem;
+    flex-wrap: wrap;
+  }
+
+  .main-header-nav {
+    flex-direction: row;
+  }
+
+  .site-title {
+    font-size: 3rem;
+  }
 }
