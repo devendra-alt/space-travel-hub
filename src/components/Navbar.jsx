@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styling/Navbar.css';
+import '../styles/Navbar.css';
 import { NavLink } from 'react-router-dom';
 import planet from '../assets/planet.png';
 
