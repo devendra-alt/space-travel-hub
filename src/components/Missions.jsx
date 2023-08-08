@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getMissions } from '../redux/missions/missionsSlice';
+import Header from './Header';
 
 function Mission() {
   const missionsData = useSelector((state) => state.missions);
@@ -12,9 +13,12 @@ function Mission() {
 
   console.log(missionsData);
   return (
-    <div>
-      <h1>hello Missions</h1>
-    </div>
+    <>
+      <Header />
+      <div>
+        <h1>hello Missions</h1>
+      </div>
+    </>
   );
 }
 
