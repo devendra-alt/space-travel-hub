@@ -1,3 +1,14 @@
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
+
+const URL = 'https://api.spacexdata.com/v3/rockets';
+
+const initialState = {
+  rockets: [],
+  loading: 'idle',
+  error: null,
+};
+
 export const fetchRocketData = createAsyncThunk(
   'rockets/fetchRockets',
   async (rejectWithValue) => {
@@ -9,6 +20,7 @@ export const fetchRocketData = createAsyncThunk(
     }
   }
 );
+
 const rocketSlice = createSlice({
   name: 'rockets',
   initialState,
@@ -35,3 +47,5 @@ const rocketSlice = createSlice({
       });
   },
 });
+
+export default rocketSlice.reducer;
