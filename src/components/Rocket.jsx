@@ -37,7 +37,7 @@ function Rocket({ id, name, images, description, reserved }) {
 Rocket.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  images: PropTypes.array.isRequired,
+  images: PropTypes.shape([]).isRequired,
   description: PropTypes.string.isRequired,
   reserved: PropTypes.bool,
 };
