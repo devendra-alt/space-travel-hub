@@ -29,7 +29,7 @@ function Profile() {
                     <div>
                       <p style={{ fontSize: '1.4rem' }}>{rocket.name}</p>
                       <Button variant="outline-info">
-                        <a href={rocket.wikipedia} target="_blank">
+                        <a href={rocket.wikipedia} target="_blank" rel="noreferrer">
                           Read more
                         </a>
                       </Button>
