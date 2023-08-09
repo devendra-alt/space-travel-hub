@@ -1,7 +1,10 @@
 import React from 'react';
 import Header from './Header';
-
+import { Col, Container, ListGroup, Row } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 function Profile() {
+  const { rockets } = useSelector((state) => state.rockets);
+  const reservedRockets = rockets.filter((rocket) => rocket.reserved === true);
   return (
     <>
       <Header />
