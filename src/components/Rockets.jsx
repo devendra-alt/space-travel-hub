@@ -1,8 +1,9 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { Alert, ListGroup, Spinner } from 'react-bootstrap';
 import Header from './Header';
 import Rocket from './Rocket';
-import { Alert, ListGroup, Spinner } from 'react-bootstrap';
+
 function Rockets() {
   const { rockets, loading, error } = useSelector((state) => state.rockets);
   return (
@@ -15,16 +16,24 @@ function Rockets() {
             role="status"
             style={{ width: '5rem', height: '5rem' }}
             variant="primary"
-          ></Spinner>
+          />
         )}
         {error && <Alert variant="danger">{error}</Alert>}
-        <ListGroup>
-          {rockets.map((rocket) => (
-            <ListGroup.Item key={rocket.id}>
-              <Rocket {...rocket} />
-            </ListGroup.Item>
-          ))}
-        </ListGroup>
+        {loading === 'loaded' && (
+          <ListGroup>
+            {rockets.map((rocket) => (
+              <ListGroup.Item key={rocket.id}>
+                <Rocket
+                  id={rocket.id}
+                  name={rocket.name}
+                  images={rocket.images}
+                  description={rocket.description}
+                  reserved={rocket.reserved}
+                />
+              </ListGroup.Item>
+            ))}
+          </ListGroup>
+        )}
       </section>
     </>
   );

@@ -52,6 +52,7 @@ const rocketSlice = createSlice({
           rocketData.name = rocket.rocket_name;
           rocketData.type = rocket.rocket_type;
           rocketData.images = rocket.flickr_images;
+          rocketData.description = rocket.description;
           return rocketData;
         });
         state.loading = 'loaded';
@@ -62,5 +63,7 @@ const rocketSlice = createSlice({
       });
   },
 });
+
+export const { rocketBooking, rocketBookingCancel } = rocketSlice.actions;
 
 export default rocketSlice.reducer;

@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import Profile from './components/Profile';
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { fetchRocketData } from './redux/rockets/features/rocketsSlice';
 
 const router = createBrowserRouter([
