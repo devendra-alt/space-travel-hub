@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import {
   Alert, Button, Col, Container, ListGroup, Row,
 } from 'react-bootstrap';
@@ -21,7 +20,7 @@ function Profile() {
       <Header />
       <Container fluid className="mx-auto col-10">
         <Row className="flex-column flex-lg-row flex-xl-row">
-           <Col>
+          <Col>
             <div className="mb-4">
               <p className="h2">Missions</p>
               <ListGroup>
