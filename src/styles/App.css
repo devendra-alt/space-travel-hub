@@ -44,6 +44,11 @@ a.active.nav-link {
   align-items: center;
 }
 
+Button > a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
 @media screen and (min-width: 764px) {
   .main-header {
     padding: 1rem 10rem;
