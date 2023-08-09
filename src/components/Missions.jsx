@@ -1,40 +1,19 @@
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
 import { getMissions } from '../redux/missions/missionsSlice';
 import MissionList from './MissionList';
 import Header from './Header';
 
-function Mission() {
+function Missions() {
   const missionsData = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMissions());
-  }, [dispatch]);
-  if (missionsData.loading) {
-    return (
-      <>
-        <Header />
-        <div>
-          <p>Loading...</p>
-        </div>
-      </>
-    );
-  }
+    if (missionsData.missions.length === 0) {
+      dispatch(getMissions());
+    }
+  }, [dispatch, missionsData.missions.length]);
 
-  if (missionsData.error) {
-    return (
-      <>
-        <Header />
-        <div>
-          <p>
-            Oops! an error occurred:
-            {missionsData.error}
-          </p>
-        </div>
-      </>
-    );
-  }
   return (
     <>
       <Header />
@@ -49,13 +28,23 @@ function Mission() {
             </tr>
           </thead>
           <tbody>
-            {missionsData.missions.map((mission, index) => (
-              <MissionList
-                key={mission.mission_id}
-                mission={mission}
-                index={index}
-              />
-            ))}
+            {missionsData.loading || missionsData.error ? (
+              <tr>
+                <td colSpan="4">
+                  {missionsData.error
+                    ? `Oops! An error occurred: ${missionsData.error}`
+                    : 'Loading...'}
+                </td>
+              </tr>
+            ) : (
+              missionsData.missions.map((mission, index) => (
+                <MissionList
+                  key={mission.mission_id}
+                  mission={mission}
+                  index={index}
+                />
+              ))
+            )}
           </tbody>
         </table>
       </div>
@@ -63,4 +52,4 @@ function Mission() {
   );
 }
 
-export default Mission;
+export default Missions;
