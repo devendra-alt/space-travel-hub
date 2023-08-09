@@ -35,5 +35,16 @@ function Rocket({ id, name, images, description, reserved }) {
     </Card>
   );
 }
+Rocket.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  images: PropTypes.shape.isRequired,
+  description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool,
+};
+
+Rocket.defaultProps = {
+  reserved: false,
+};
 
 export default Rocket;
