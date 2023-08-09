@@ -5,6 +5,7 @@ import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import Profile from './components/Profile';
 import { fetchRocketData } from './redux/rockets/features/rocketsSlice';
+import { getMissions } from './redux/missions/missionsSlice';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ function App() {
   const dispath = useDispatch();
   useEffect(() => {
     dispath(fetchRocketData());
+    dispath(getMissions());
   }, [dispath]);
   return <RouterProvider router={router} />;
 }
