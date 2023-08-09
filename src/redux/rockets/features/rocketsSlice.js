@@ -53,6 +53,7 @@ const rocketSlice = createSlice({
           rocketData.type = rocket.rocket_type;
           rocketData.images = rocket.flickr_images;
           rocketData.description = rocket.description;
+          rocketData.wikipedia = rocket.wikipedia;
           return rocketData;
         });
         state.loading = 'loaded';
