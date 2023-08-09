@@ -13,6 +13,14 @@ function Rockets() {
   return (
     <>
       <Header />
+        <ListGroup>
+          {rockets.map((rocket) => (
+            <ListGroup.Item key={rocket.id}>
+              <Rocket {...rocket} />
+            </ListGroup.Item>
+          ))}
+        </ListGroup>
+      </section>
     </>
   );
 }
