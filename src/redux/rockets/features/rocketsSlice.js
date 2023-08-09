@@ -25,6 +25,13 @@ export const fetchRocketData = createAsyncThunk(
 const rocketSlice = createSlice({
   name: 'rockets',
   initialState,
+    rocketBookingCancel(state, { payload }) {
+      state.rockets = state.rockets.map((rocket) => {
+        if (rocket.id === payload) return { ...rocket, reserved: false };
+        return rocket;
+      });
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchRocketData.pending, (state) => {
