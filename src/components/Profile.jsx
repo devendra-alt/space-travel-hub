@@ -1,5 +1,7 @@
 import React from 'react';
-import { Alert, Button, Col, Container, ListGroup, Row } from 'react-bootstrap';
+import {
+  Alert, Button, Col, Container, ListGroup, Row,
+} from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Header from './Header';
 import { rocketBookingCancel } from '../redux/rockets/features/rocketsSlice';

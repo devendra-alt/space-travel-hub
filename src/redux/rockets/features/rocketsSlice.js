@@ -19,7 +19,7 @@ export const fetchRocketData = createAsyncThunk(
       rejectWithValue(error);
     }
     return rejectWithValue('operation failed');
-  }
+  },
 );
 
 const rocketSlice = createSlice({
