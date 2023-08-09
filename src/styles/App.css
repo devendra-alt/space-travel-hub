@@ -36,6 +36,12 @@ a.active.nav-link {
   text-decoration: underline;
 }
 
+.rockets-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (min-width: 764px) {
   .main-header {
     padding: 1rem 10rem;
