@@ -49,6 +49,7 @@ const missionsSlice = createSlice({
           ...mission,
           reserved: false,
         }));
+
         state.loading = false;
       })
       .addCase(getMissions.rejected, (state) => {
@@ -57,7 +58,5 @@ const missionsSlice = createSlice({
       });
   },
 });
-
 export const { joinMission } = missionsSlice.actions;
-
 export default missionsSlice.reducer;
