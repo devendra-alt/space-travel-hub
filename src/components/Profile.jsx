@@ -24,7 +24,7 @@ function Profile() {
             <div className="mb-4">
               <p className="h2">Missions</p>
               {!reservedMissions.length && (
-              <Alert variant="info">My Mission is empty</Alert>
+                <Alert variant="info">My Mission is empty</Alert>
               )}
               <ListGroup>
                 {/* Render reserved missions here */}
@@ -38,7 +38,10 @@ function Profile() {
           </Col>
           <Col>
             {!reservedRockets.length && (
-              <Alert variant="info">My Reserved Rockets is empty</Alert>
+              <>
+                <p className="h2">My Rockets</p>
+                <Alert variant="info">My Reserved Rockets is empty</Alert>
+              </>
             )}
             {!!reservedRockets.length && (
               <ListGroup>
@@ -51,7 +54,11 @@ function Profile() {
                     <div>
                       <p style={{ fontSize: '1.4rem' }}>{rocket.name}</p>
                       <Button variant="outline-info">
-                        <a href={rocket.wikipedia} target="_blank" rel="noreferrer">
+                        <a
+                          href={rocket.wikipedia}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           Read more
                         </a>
                       </Button>
