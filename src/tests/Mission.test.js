@@ -1,11 +1,11 @@
 import '@testing-library/jest-dom';
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import { Provider } from 'react-redux'; // Import Provider
-import configureStore from 'redux-mock-store'; // Import configureStore
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
 import Missions from '../components/Missions';
 
-// Mock Redux store
 const mockStore = configureStore([]);
 const initialState = {
   missions: {
@@ -24,7 +24,6 @@ const initialState = {
         description: 'Mock description 2',
         reserved: false,
       },
-
     ],
   },
 };
@@ -34,7 +33,9 @@ test('Missions component renders correctly', () => {
   const tree = renderer
     .create(
       <Provider store={store}>
-        <Missions />
+        <BrowserRouter>
+          <Missions />
+        </BrowserRouter>
       </Provider>,
     )
     .toJSON();
