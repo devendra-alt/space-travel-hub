@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions component renders correctly 1`] = `
+[
+  <header
+    className="main-header"
+  >
+    <div
+      className="site-title-section"
+    >
+      <img
+        alt="space travel hub logo"
+        height="60px"
+        src="test-file-stub"
+        width="60px"
+      />
+      <h1
+        className="site-title"
+      >
+        Space Traveler's Hub
+      </h1>
+    </div>
+    <nav
+      className="main-header-nav"
+    >
+      <a
+        aria-current="page"
+        className="nav-link active"
+        href="/"
+        onClick={[Function]}
+      >
+        Rockets
+      </a>
+      <a
+        className="nav-link"
+        href="/missions"
+        onClick={[Function]}
+      >
+        Missions
+      </a>
+      <a
+        className="nav-link"
+        href="/my-profile"
+        onClick={[Function]}
+      >
+        Profile
+      </a>
+    </nav>
+  </header>,
+  <div
+    className="container mx-auto px-4"
+  >
+    <table
+      className="table-auto w-full border-collapse border"
+    >
+      <thead>
+        <tr>
+          <th
+            className="border p-2 text-left"
+          >
+            Mission
+          </th>
+          <th
+            className="border p-2 text-left"
+          >
+            Description
+          </th>
+          <th
+            className="border p-2 text-left"
+          >
+            Status
+          </th>
+          <th
+            className="border p-2 text-left"
+          >
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          className="bg-gray-100"
+        >
+          <td
+            className="border p-4"
+          >
+            Mock Mission 1
+          </td>
+          <td
+            className="border p-4"
+          >
+            Mock description 1
+          </td>
+          <td
+            className="border p-4"
+          >
+            <span
+              className="inline-flex items-center rounded-md active-badge whitespace-nowrap"
+            >
+              ACTIVE MEMBER
+            </span>
+          </td>
+          <td>
+            <button
+              className="border p-1 leave-button mx-2 rounded whitespace-nowrap"
+              onClick={[Function]}
+              type="button"
+            >
+              Leave Mission
+            </button>
+          </td>
+        </tr>
+        <tr
+          className=""
+        >
+          <td
+            className="border p-4"
+          >
+            Mock Mission 2
+          </td>
+          <td
+            className="border p-4"
+          >
+            Mock description 2
+          </td>
+          <td
+            className="border p-4"
+          >
+            <span
+              className="inline-flex items-center rounded-md not-member-badge whitespace-nowrap"
+            >
+              NOT A MEMBER
+            </span>
+          </td>
+          <td>
+            <button
+              className="border p-1 join-button mx-2 rounded whitespace-nowrap"
+              onClick={[Function]}
+              type="button"
+            >
+              Join Mission
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>,
+]
+`;

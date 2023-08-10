@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders correctly 1`] = `
+<DocumentFragment>
+  <header
+    class="main-header"
+  >
+    <div
+      class="site-title-section"
+    >
+      <img
+        alt="space travel hub logo"
+        height="60px"
+        src="test-file-stub"
+        width="60px"
+      />
+      <h1
+        class="site-title"
+      >
+        Space Traveler's Hub
+      </h1>
+    </div>
+    <nav
+      class="main-header-nav"
+    >
+      <a
+        aria-current="page"
+        class="nav-link active"
+        href="/"
+      >
+        Rockets
+      </a>
+      <a
+        class="nav-link"
+        href="/missions"
+      >
+        Missions
+      </a>
+      <a
+        class="nav-link"
+        href="/my-profile"
+      >
+        Profile
+      </a>
+    </nav>
+  </header>
+</DocumentFragment>
+`;

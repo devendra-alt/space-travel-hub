@@ -6,7 +6,6 @@ import '../styles/MissionList.css';
 
 function MissionList({ mission, index }) {
   const dispatch = useDispatch();
-
   const handleAttendance = () => {
     if (mission && mission.reserved) {
       dispatch(leaveMission(mission.mission_id));

@@ -23,6 +23,9 @@ function Profile() {
           <Col>
             <div className="mb-4">
               <p className="h2">Missions</p>
+              {!reservedMissions.length && (
+              <Alert variant="info">My Mission is empty</Alert>
+              )}
               <ListGroup>
                 {/* Render reserved missions here */}
                 {reservedMissions.map((mission) => (
