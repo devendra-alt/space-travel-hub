@@ -1,6 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Missions component renders correctly 1`] = `
-<React.Fragment>
-  <Header />
+[
+  <header
+    className="main-header"
+  >
+    <div
+      className="site-title-section"
+    >
+      <img
+        alt="space travel hub logo"
+        height="60px"
+        src="test-file-stub"
+        width="60px"
+      />
+      <h1
+        className="site-title"
+      >
+        Space Traveler's Hub
+      </h1>
+    </div>
+    <nav
+      className="main-header-nav"
+    >
+      <a
+        aria-current="page"
+        className="nav-link active"
+        href="/"
+        onClick={[Function]}
+      >
+        Rockets
+      </a>
+      <a
+        className="nav-link"
+        href="/missions"
+        onClick={[Function]}
+      >
+        Missions
+      </a>
+      <a
+        className="nav-link"
+        href="/my-profile"
+        onClick={[Function]}
+      >
+        Profile
+      </a>
+    </nav>
+  </header>,
   <div
     className="container mx-auto px-4"
   >
@@ -32,7 +78,9 @@ exports[`Missions component renders correctly 1`] = `
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr
+          className="bg-gray-100"
+        >
           <td
             className="border p-4"
           >
@@ -54,15 +102,17 @@ exports[`Missions component renders correctly 1`] = `
           </td>
           <td>
             <button
-              type="button"
               className="border p-1 leave-button mx-2 rounded whitespace-nowrap"
               onClick={[Function]}
+              type="button"
             >
               Leave Mission
             </button>
           </td>
         </tr>
-        <tr>
+        <tr
+          className=""
+        >
           <td
             className="border p-4"
           >
@@ -84,9 +134,9 @@ exports[`Missions component renders correctly 1`] = `
           </td>
           <td>
             <button
-              type="button"
               className="border p-1 join-button mx-2 rounded whitespace-nowrap"
               onClick={[Function]}
+              type="button"
             >
               Join Mission
             </button>
@@ -94,6 +144,6 @@ exports[`Missions component renders correctly 1`] = `
         </tr>
       </tbody>
     </table>
-  </div>
-</React.Fragment>
+  </div>,
+]
 `;
