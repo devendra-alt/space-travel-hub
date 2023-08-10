@@ -5,7 +5,8 @@ import {
   waitForElementToBeRemoved,
 } from '@testing-library/react';
 import App from '../App';
-import { renderWithProviders } from '../../storeProvider';
+import renderWithProviders from '../../storeProvider';
+
 describe('App render correctly', () => {
   it('should render correctly', () => {
     renderWithProviders(<App />);
@@ -14,23 +15,23 @@ describe('App render correctly', () => {
   it('should reserve rocket rocket', async () => {
     renderWithProviders(<App />);
     await waitForElementToBeRemoved(screen.getByRole('status'));
-    let reserveBtn = screen.getAllByText(/Reserve Rocket/i);
+    const reserveBtn = screen.getAllByText(/Reserve Rocket/i);
     fireEvent.click(reserveBtn[0]);
     expect(screen.getByText(/Reserved/i)).toBeInTheDocument();
   });
   it('should cancel reserved rocket', async () => {
     renderWithProviders(<App />);
     await waitForElementToBeRemoved(screen.getByRole('status'));
-    let reserveBtn = screen.getAllByText(/Reserve Rocket/i);
+    const reserveBtn = screen.getAllByText(/Reserve Rocket/i);
     fireEvent.click(reserveBtn[0]);
-    let cancelBtn = screen.getByText(/Cancel Reservation/i);
+    const cancelBtn = screen.getByText(/Cancel Reservation/i);
     fireEvent.click(cancelBtn);
     expect(screen.queryByText(/Cancel Reservation/i)).not.toBeInTheDocument();
   });
   it('should display image on screen', async () => {
     renderWithProviders(<App />);
     await waitForElementToBeRemoved(screen.getByRole('status'));
-    let Images = screen.getAllByRole('img');
+    const Images = screen.getAllByRole('img');
     expect(Images.length).toBe(5);
   });
 });
