@@ -9,7 +9,7 @@ function Rockets() {
   return (
     <>
       <Header />
-      <section className="rockets-container">
+      <section className="rockets-container col-10 mx-auto">
         {loading === 'pending' && (
           <Spinner
             animation="border"
