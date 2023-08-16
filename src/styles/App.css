@@ -1,0 +1,65 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --primary-bg: #fff;
+}
+
+.main-header {
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title-section {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.site-title {
+  font-size: 1.8rem;
+}
+
+.main-header-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  padding-right: 2rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+a.active.nav-link {
+  text-decoration: underline;
+}
+
+.rockets-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button > a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 764px) {
+  .main-header {
+    padding: 1rem 10rem;
+    flex-wrap: wrap;
+  }
+
+  .main-header-nav {
+    flex-direction: row;
+  }
+
+  .site-title {
+    font-size: 3rem;
+  }
+}
